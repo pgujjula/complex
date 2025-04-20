@@ -11,7 +11,8 @@ tests :: TestTree
 tests =
   testGroup
     "Math.Complex"
-    [ test_Eq
+    [ test_Eq,
+      test_Ord
     ]
 
 test_Eq :: TestTree
@@ -27,3 +28,16 @@ test_Eq =
     mapM_
       checkUnequal
       [((0 :: Int) :+ 0, 1 :+ 0), ((-1) :+ 2, (-1) :+ 3), (3 :+ 4, 2 :+ 3)]
+
+test_Ord :: TestTree
+test_Ord =
+  testCase "Ord instance" $ do
+    let checkLessThan :: (Ord a) => (Complex a, Complex a) -> IO ()
+        checkLessThan (x, y) = assertBool "found not <" (x < y)
+
+    mapM_
+      checkLessThan
+      [ ((0 :: Int) :+ 0, (1 :: Int) :+ 0),
+        ((3 :: Int) :+ 100, (4 :: Int) :+ 1),
+        ((3 :: Int) :+ 1, (3 :: Int) :+ 2)
+      ]
