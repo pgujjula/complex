@@ -8,4 +8,9 @@ module Math.Complex (Complex (..)) where
 --
 --   The complex number \(a + bi\) is represented by @a :+ b@.
 data Complex a = !a :+ !a
-  deriving (Eq)
+  deriving
+    ( Eq,
+      -- | The 'Ord' instance simply compares the real parts followed by the
+      --   imaginary parts and has little mathematical significance.
+      Ord
+    )
