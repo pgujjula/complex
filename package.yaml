@@ -9,7 +9,7 @@ category:     Math
 stability:    experimental
 github:       "pgujjula/complex"
 author:       "Preetham Gujjula"
-maintainer:   "libraries@mail.preetham.io"
+maintainer:   "Preetham Gujjula <libraries@mail.preetham.io>"
 copyright:    "Preetham Gujjula"
 license:      BSD-3-Clause
 

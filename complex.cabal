@@ -13,7 +13,7 @@ stability:      experimental
 homepage:       https://github.com/pgujjula/complex#readme
 bug-reports:    https://github.com/pgujjula/complex/issues
 author:         Preetham Gujjula
-maintainer:     libraries@mail.preetham.io
+maintainer:     Preetham Gujjula <libraries@mail.preetham.io>
 copyright:      Preetham Gujjula
 license:        BSD-3-Clause
 build-type:     Simple
